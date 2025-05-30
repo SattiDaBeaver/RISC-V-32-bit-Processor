@@ -9,22 +9,12 @@ module testbench ( );
     logic [0:0] KEY;
     logic [6:0] HEX0;
 
-	// Neuron Test
-	logic 				reset;
-	logic [7:0] 		neuronIn;
-	logic [7:0] 		neuronOut;
-	logic 				neuronValid;
-	logic 				neuronOutValid;
-
-    // Weight Memory
-    logic [7:0]       weightMem [0:255];
-
-    initial begin
-        $readmemb("weight_L0_N0.mif", weightMem);
-        $display("Loaded weights:");
-        for (int i = 0; i < 16; i++)
-            $display("weightMem[%0d] = %b", i, weightMem[i]);
-    end
+	// Comparison Unit Test
+    logic reset;
+    logic [31:0] inputA;
+    logic [31:0] inputB;
+    logic [3:0]  compSelect;
+    logic [31:0] compOut;
 
 	initial begin
         CLOCK_50 <= 1'b0;
@@ -33,51 +23,56 @@ module testbench ( );
 	begin : Clock_Generator
 		#((CLOCK_PERIOD) / 2) CLOCK_50 <= ~CLOCK_50;
 	end
+
+    enum logic [selectWidth-1:0] {
+        EQUAL, NOT_EQUAL, LESS_THAN, LESS_THAN_OR_EQUAL, GREATER_THAN, GREATER_THAN_OR_EQUAL
+    } comparisonType;
 	
 	initial begin
-        reset <= 1'b0;
         #10
-        reset <= 1'b1;
-		#10 
-		reset <= 1'b0;
-		neuronIn <= 8'h7f; // Test with a positive input
+        compSelect <= EQUAL; // EQUAL
+		inputA <= 32'h0000008; // 
+        inputB <= 32'h0000008; // 
 		#10
-		neuronValid <= 1'b1;
-        #300
+        inputA <= 32'h0000008; // 
+        inputB <= 32'h0000007; // 
+		#20
 
-        reset <= 1'b0;
-        #10
-        reset <= 1'b1;
-		#10 
-        reset <= 1'b0;
-		neuronIn <= 8'h80; // Test with a negative input
+        compSelect <= NOT_EQUAL; // NOT EQUAL
+		inputA <= 32'h0000003; // 
+        inputB <= 32'h0000007; // 
 		#10
-		neuronValid <= 1'b1;
+        inputA <= 32'h0000007; // 
+        inputB <= 32'h0000007; // 
+        #20
+
+        compSelect <= LESS_THAN; // LESS THAN
+		inputA <= 32'h0000003; // 
+        inputB <= 32'h0000007; // 
+		#10
+        inputA <= 32'h0000007; // 
+        inputB <= 32'h0000007; // 
+        #10
+        inputA <= 32'h0000007; // 
+        inputB <= 32'h0000007; // 
+
+
+
+
         
 	end // initial
 	
-	neuron #(
-        .layerNumber(0),
-        .neuronNumber(0),
-        .numWeights(16),
-        .dataWidth(8),
-        .weightIntWidth(4),
-        .biasFile("bias_L0_N0.mif"),
-        .weightFile("weight_L0_N0.mif")
-    ) U1 (
+	ComparisonUnit #(
+        .dataWidth(32),
+        .selectWidth(4)
+    ) comp_unit (
         .clk(CLOCK_50),
         .reset(reset),
-        .neuronIn(neuronIn),
-        .neuronValid(neuronValid),
-        .weightValid(),
-        .weightWriteEn(),
-        .biasWriteEn(),
-        .weightData(32'h0),
-        .biasData(32'h0),
-        .config_layer_number(32'h0),
-        .config_neuron_number(32'h0),
-        .neuronOut(neuronOut),
-        .neuronOutValid(neuronOutValid)
+        .inputA(compIn),
+        .inputB(8'h80), // Test with a negative input
+        .comparisonSelect(compSelect),
+        
+        .output(compOut)
     );
 
 endmodule

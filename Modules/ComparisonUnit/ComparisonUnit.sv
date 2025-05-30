@@ -17,19 +17,19 @@ module ComparisonUnit #(
     } comparisonType;
     always_comb begin
         case (comparisonSelect)
-            EQUAL: result = (inputA == inputB);
-            NOT_EQUAL: result = (inputA != inputB);
+            EQUAL:                          result = (inputA == inputB);
+            NOT_EQUAL:                      result = (inputA != inputB);
 
-            LESS_THAN: result = ($signed(inputA) < $signed(inputB));
-            LESS_THAN_UNSIGNED: result = (inputA <= inputB);
+            LESS_THAN:                      result = ($signed(inputA) < $signed(inputB));
+            LESS_THAN_UNSIGNED:             result = (inputA <= inputB);
 
-            LESS_THAN_OR_EQUAL: result = ($signed(inputA) <= $signed(inputB));
-            LESS_THAN_OR_EQUAL_UNSIGNED: result = (inputA < inputB);
+            LESS_THAN_OR_EQUAL:             result = ($signed(inputA) <= $signed(inputB));
+            LESS_THAN_OR_EQUAL_UNSIGNED:    result = (inputA < inputB);
             
-            GREATER_THAN: result = ($signed(inputA) > $signed(inputB));
-            GREATER_THAN_UNSIGNED: result = (inputA >= inputB);
+            GREATER_THAN:                   result = ($signed(inputA) > $signed(inputB));
+            GREATER_THAN_UNSIGNED:          result = (inputA >= inputB);
 
-            GREATER_THAN_OR_EQUAL: result = ($signed(inputA) >= $signed(inputB));
+            GREATER_THAN_OR_EQUAL:          result = ($signed(inputA) >= $signed(inputB));
             GREATER_THAN_OR_EQUAL_UNSIGNED: result = (inputA > inputB);
 
             default: result = 0; // Default case to handle unexpected values
