@@ -29,6 +29,31 @@ Z9 !s90 -reportprogress|300|../part3.v|
 !i113 1
 Z10 tCvgOpt 0
 nclock@down
+vComparisonUnit
+Z11 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z12 !s110 1748617971
+!i10b 1
+!s100 TIBmmnRf`MU_>VGgR9JP[3
+I4U1T05I:TKeZc]1d2DIfY1
+R2
+!s105 ComparisonUnit_sv_unit
+S1
+Z13 dC:/Projects/RISC-V-32-bit-Processor/Modules/ComparisonUnit/ModelSim
+w1748617969
+8../ComparisonUnit.sv
+F../ComparisonUnit.sv
+L0 1
+R6
+r1
+!s85 0
+31
+Z14 !s108 1748617971.000000
+!s107 ../ComparisonUnit.sv|
+!s90 -reportprogress|300|-sv|../ComparisonUnit.sv|
+!i113 1
+o-sv
+R10
+n@comparison@unit
 vdigit_flipper
 R1
 !i10b 1
@@ -50,15 +75,15 @@ R9
 !i113 1
 R10
 vneuron
-Z11 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z12 !s110 1748447715
+R11
+Z15 !s110 1748447715
 !i10b 1
 !s100 CRfb_@zWd@cIJ38[mX`kR2
 IRC8G:Y;zeiH5_14OWnHMP1
 R2
 !s105 neuron_sv_unit
 S1
-Z13 dC:/Projects/Neural Network on FPGA/ModelSim/Neuron/ModelSim
+Z16 dC:/Projects/Neural Network on FPGA/ModelSim/Neuron/ModelSim
 w1748447675
 8../neuron.sv
 F../neuron.sv
@@ -67,7 +92,7 @@ R6
 r1
 !s85 0
 31
-Z14 !s108 1748447715.000000
+Z17 !s108 1748447715.000000
 !s107 ../neuron.sv|
 !s90 -reportprogress|300|-sv|../neuron.sv|
 !i113 1
@@ -95,14 +120,14 @@ R9
 R10
 vreLU
 R11
-R12
+R15
 !i10b 1
 !s100 Dg`mHmPW?_31:8iNgo@g03
 I[J4fN3oYL:428kcRTo3;G1
 R2
 !s105 reLU_sv_unit
 S1
-R13
+R16
 w1748192349
 8../reLU.sv
 F../reLU.sv
@@ -111,7 +136,7 @@ R6
 r1
 !s85 0
 31
-R14
+R17
 !s107 ../reLU.sv|
 !s90 -reportprogress|300|-sv|../reLU.sv|
 !i113 1
@@ -142,13 +167,13 @@ vtestbench
 R11
 R12
 !i10b 1
-!s100 3Uk@1[E]LJZ;Oc0m2=KC<2
-ILHXd]eH?fViP^ilEL@J1_0
+!s100 _IcLEzYKJ[M`;[mFAkW:40
+IkA:6gl<fFNf56A28A[YEl0
 R2
 !s105 testbench_sv_unit
 S1
 R13
-w1748442381
+w1748617902
 8testbench.sv
 Ftestbench.sv
 L0 4
@@ -184,14 +209,14 @@ R9
 R10
 vweights
 R11
-R12
+R15
 !i10b 1
 !s100 f::R>?el_l@@TCj><a^dg0
 I4J99DmAk3l04hCzWCL9l^3
 R2
 !s105 weights_sv_unit
 S1
-R13
+R16
 w1748193238
 8../weights.sv
 F../weights.sv
@@ -200,7 +225,7 @@ R6
 r1
 !s85 0
 31
-R14
+R17
 !s107 ../weights.sv|
 !s90 -reportprogress|300|-sv|../weights.sv|
 !i113 1

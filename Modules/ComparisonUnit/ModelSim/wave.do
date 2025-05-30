@@ -4,28 +4,16 @@ add wave -noupdate -label CLOCK_50 -radix binary /testbench/CLOCK_50
 add wave -noupdate -label Reset -radix binary /testbench/reset
 
 add wave -noupdate -divider Inputs
-add wave -noupdate -label neuronIn -radix hexadecimal /testbench/neuronIn
-add wave -noupdate -label neuronValid -radix hexadecimal /testbench/neuronValid
+add wave -noupdate -label inputA -radix hexadecimal /testbench/inputA
+add wave -noupdate -label inputB -radix hexadecimal /testbench/inputB
+add wave -noupdate -label select -radix hexadecimal /testbench/compSelect
 
 add wave -noupdate -divider "Internal Nets"
-add wave -noupdate -label "FSM State" -radix hexadecimal /testbench/U1/state
-add wave -noupdate -label MACenable -radix hexadecimal /testbench/U1/MACenable
-add wave -noupdate -label activationEnable -radix hexadecimal /testbench/U1/activationEnable
-add wave -noupdate -label readEnable -radix hexadecimal /testbench/U1/readEn
-add wave -noupdate -label weightAddress -radix hexadecimal /testbench/U1/weightAddress
-add wave -noupdate -label weightOut -radix hexadecimal /testbench/U1/weightOut
-add wave -noupdate -label multOut -radix hexadecimal /testbench/U1/multOut
-add wave -noupdate -label adderOutWire -radix hexadecimal /testbench/U1/adderOutWire
-add wave -noupdate -label adderOut -radix hexadecimal /testbench/U1/adderOut
-add wave -noupdate -label biasOut -radix hexadecimal /testbench/U1/biasOut
-add wave -noupdate -label sumOut -radix hexadecimal /testbench/U1/sumOut
-add wave -noupdate -label sumOutWire -radix hexadecimal /testbench/U1/sumOutWire
-add wave -noupdate -label reluOut -radix hexadecimal /testbench/U1/reluOut
 
 add wave -noupdate -divider Outputs
-add wave -noupdate -label neuronOut -radix hexadecimal /testbench/neuronOut
-add wave -noupdate -label neuronOutValid -radix hexadecimal /testbench/neuronOutValid
-
+add wave -noupdate -label output -radix hexadecimal /testbench/compOut
+add wave -noupdate -label outputBit -radix hexadecimal /testbench/compBit
+add wave -noupdate -label expectedOutput -radix hexadecimal /testbench/compOutExpected
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {10000 ps} 0}
 quietly wave cursor active 1
