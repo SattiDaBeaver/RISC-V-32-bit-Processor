@@ -1,4 +1,4 @@
-module RFile #(dataWidth = 32, AddressWidth = $clog2(dataWidth))
+module RFile #(dataWidth = 32, AddressWidth = $clog2(dataWidth), numReg = 32)
              (
              input logic Clk ,
              input logic RFwrite,
@@ -11,5 +11,37 @@ module RFile #(dataWidth = 32, AddressWidth = $clog2(dataWidth))
              output logic [dataWidth-1:0] dataA,
              output logic [dataWidth-1:0] dataB, )
 
+integer i;
+
+
+
+logic [dataWidth-1:0] registers [numReg-1:0];
+initial begin
+for(i=0;i<numReg;i++){
+    registers [i] = 0;
+}
+end 
+
+always @ (posedge Clk) begin 
+    if(reset) begin
+        for(i=0;i<numReg;i++){
+        registers [i] = 0;
+        }
+    end
+
+    else if(RFwrite) begin 
+        if(regW == 0)begin
+            registers[0] = 0;
+        end
+        else begin
+        registers[regW] <= dataW;
+        end
+    end
+end
+
+always @(*) begin
+    dataA <= registers[RegA];
+    dataB <= registers[RegB];
+end
 
 endmodule
