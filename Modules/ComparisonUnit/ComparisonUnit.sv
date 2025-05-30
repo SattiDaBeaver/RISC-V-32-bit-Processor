@@ -16,6 +16,7 @@ module ComparisonUnit #(
         EQUAL, NOT_EQUAL, LESS_THAN, LESS_THAN_UNSIGNED, LESS_THAN_OR_EQUAL, LESS_THAN_OR_EQUAL_UNSIGNED,
         GREATER_THAN, GREATER_THAN_UNSIGNED, GREATER_THAN_OR_EQUAL, GREATER_THAN_OR_EQUAL_UNSIGNED
     } comparisonType;
+    
     always_comb begin
         case (comparisonSelect)
             EQUAL:                          result = (inputA == inputB);
