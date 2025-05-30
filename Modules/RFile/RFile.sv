@@ -17,21 +17,21 @@ integer i;
 
 logic [dataWidth-1:0] registers [numReg-1:0];
 initial begin
-for(i=0;i<numReg;i++){
-    registers [i] = 0;
-}
+for(i=0;i<numReg;i++) begin
+    registers [i] <= 0;
+end
 end 
 
 always @ (posedge Clk) begin 
     if(reset) begin
         for(i=0;i<numReg;i++){
-        registers [i] = 0;
+        registers [i] <= 0;
         }
     end
 
     else if(RFwrite) begin 
         if(regW == 0)begin
-            registers[0] = 0;
+            registers[0] <= 0;
         end
         else begin
         registers[regW] <= dataW;
