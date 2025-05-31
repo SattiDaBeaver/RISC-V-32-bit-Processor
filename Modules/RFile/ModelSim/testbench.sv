@@ -10,15 +10,19 @@ module testbench ();
     logic [6:0] HEX0;
 
 	// RFile Test
-   logic RFwrite,
-   logic reset,
-logic [AddressWidth-1:0] RegA,
-logic [AddressWidth-1:0] RegB,
-logic [AddressWidth-1:0] RegW,
-logic [dataWidth-1:0] dataW,
+
+    parameter dataWidth = 32;
+    parameter AddressWidth = 5;
+
+logic RFwrite;
+logic reset;
+logic [AddressWidth-1:0] regA;
+logic [AddressWidth-1:0] regB;
+logic [AddressWidth-1:0] regW;
+logic [dataWidth-1:0] dataW;
              
-logic [dataWidth-1:0] dataA,
-logic [dataWidth-1:0] dataB, 
+logic [dataWidth-1:0] dataA;
+logic [dataWidth-1:0] dataB; 
 
 	initial begin
         CLOCK_50 <= 1'b0;
@@ -28,25 +32,31 @@ logic [dataWidth-1:0] dataB,
 		#((CLOCK_PERIOD) / 2) CLOCK_50 <= ~CLOCK_50;
 	end
 
-    parameter dataWidth = 32;
-    parameter selectWidth = 4;
 
 	initial begin
     #10
+    reset <= 1;
+    #20
+    reset <= 0;
     RFwrite <= 1;
     regA <= 5'b00010;
     regB <= 5'b00000;
     dataW <= 32'h00000003;
     regW <= 5'b00000;
     #20
+    reset <=0;
+    RFwrite <= 1;
+    regA <= 5'b00010;
+    regB <= 5'b00000;
+    dataW <= 32'h00000003;
+    regW <= 5'b00010;
 
 
-       
-	end // initial
+    end // initial
 	
 	RFile #(
         .dataWidth(dataWidth),
-        .selectWidth(selectWidth)
+        .AddressWidth(AddressWidth)
     ) U1 (
         .Clk(CLOCK_50),
         .reset(reset),
