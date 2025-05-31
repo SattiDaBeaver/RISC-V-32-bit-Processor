@@ -50,6 +50,50 @@ logic [dataWidth-1:0] dataB;
     regB <= 5'b00000;
     dataW <= 32'h00000003;
     regW <= 5'b00010;
+    #20
+    reset <=0;
+    RFwrite <= 0;
+    regA <= 5'b00010;
+    regB <= 5'b00000;
+    dataW <= 32'h00000007;
+    regW <= 5'b00010;
+    #20
+    reset <=0;
+    RFwrite <= 1;
+    regA <= 5'b00110;
+    regB <= 5'b00000;
+    dataW <= 32'h00000009;
+    regW <= 5'b00110;
+    #20
+    reset <=0;
+    RFwrite <= 1;
+    regA <= 5'b00110;
+    regB <= 5'b00000;
+    dataW <= 32'h00000009;
+    regW <= 5'b00000;
+    #20
+    reset <=0;
+    RFwrite <= 1;
+    regA <= 5'b00111;
+    regB <= 5'b00001;
+    dataW <= 32'h00000001;
+    regW <= 5'b00001;
+     #20
+    reset <=0;
+    RFwrite <= 1;
+    regA <= 5'b00111;
+    regB <= 5'b00001;
+    dataW <= 32'h0000000B;
+    regW <= 5'b00111;
+     #20
+    reset <=0;
+    RFwrite <= 1;
+    regA <= 5'b00111;
+    regB <= 5'b00000;
+    dataW <= 32'h0000000B;
+    regW <= 5'b00111;
+
+
 
 
     end // initial
@@ -64,6 +108,7 @@ logic [dataWidth-1:0] dataB;
         .RegB(regB), 
         .RegW(regW),
         .dataW(dataW),
+        .RFwrite(RFwrite),
         
         .dataA(dataA),
         .dataB(dataB)

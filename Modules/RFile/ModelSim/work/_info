@@ -146,24 +146,24 @@ R10
 nre@l@u
 vRFile
 Z15 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z16 !s110 1748623479
+Z16 !s110 1748711992
 !i10b 1
-!s100 h5Z?ze5=z>NQ?TQnEnCA_1
+!s100 P2C0Zg>W1CSEo^d^d7YPj0
 Z17 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IE4>zm;5;k9eFC6aODnTRX1
+IPa5@eIz0^B@>>lHP^eJTW3
 R2
 S1
 Z18 dC:/Users/lalit/OneDrive/Documents/GitHub/RISC-V-32-bit-Processor/Modules/RFile/ModelSim
-w1748623472
+w1748623802
 8../RFile.sv
 F../RFile.sv
-!i122 13
-L0 1 44
+!i122 28
+L0 1 48
 Z19 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z20 !s108 1748623479.000000
+Z20 !s108 1748711992.000000
 !s107 ../RFile.sv|
 !s90 -reportprogress|300|-sv|../RFile.sv|
 !i113 1
@@ -194,17 +194,17 @@ vtestbench
 R15
 R16
 !i10b 1
-!s100 EH80BJT[Jz05242H64ncT0
+!s100 N[n_Tb;Q[fIz]4k`6mo922
 R17
-IINHlJ6GZ:@F0Gn;KbRECC1
+IhEWWf_^KOK9ochY`Teo@z3
 R2
 S1
 R18
-w1748621567
+w1748711987
 8testbench.sv
 Ftestbench.sv
-!i122 14
-L0 4 69
+!i122 29
+L0 4 114
 R19
 r1
 !s85 0
