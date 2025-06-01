@@ -8,6 +8,7 @@ add wave -noupdate -label registerA -radix hexadecimal /testbench/regA
 add wave -noupdate -label RegisterB -radix hexadecimal /testbench/regB
 add wave -noupdate -label registerW -radix hexadecimal /testbench/regW
 add wave -noupdate -label dataW -radix hexadecimal /testbench/dataW
+add wave -noupdate -label rfwrite -radix hexadecimal /testbench/RFwrite
 
 add wave -noupdate -divider "Internal Nets"
 
