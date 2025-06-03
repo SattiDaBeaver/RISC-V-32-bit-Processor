@@ -1,0 +1,59 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Projects/RISC-V-32-bit-Processor/Modules/RFile/ModelSim
+vRFile
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1748811132
+!i10b 1
+!s100 2hZdk9Co;[zUSDnUH=;^G2
+IenUTfMHDFa7B[fMY@m^NX0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 RFile_sv_unit
+S1
+R0
+Z4 w1748811072
+8../RFile.sv
+F../RFile.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1748811132.000000
+!s107 ../RFile.sv|
+!s90 -reportprogress|300|-sv|../RFile.sv|
+!i113 1
+o-sv
+Z7 tCvgOpt 0
+n@r@file
+vtestbench
+R1
+R2
+!i10b 1
+!s100 7bVZ;:HHG9SUI31c33jAm1
+I<zQRz0m`ezQgTFDiKBeH<3
+R3
+!s105 testbench_sv_unit
+S1
+R0
+R4
+8testbench.sv
+Ftestbench.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 testbench.sv|
+!s90 -reportprogress|300|-sv|testbench.sv|
+!i113 1
+o-sv
+R7
