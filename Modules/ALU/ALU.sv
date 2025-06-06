@@ -17,6 +17,7 @@ module ALU #(
     } ALUop;
     
     always_comb begin
+        dataOutHigh = 0;
         case (ALUSelect)
             ADD:        dataOut = (inputA + inputB);
             SUB:        dataOut = (inputA - inputB);

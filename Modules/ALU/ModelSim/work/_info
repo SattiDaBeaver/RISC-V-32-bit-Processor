@@ -8,79 +8,104 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/ECE241/ModelSim/lab4/part3/ModelSim
-vclockDown
-Z1 !s110 1729625227
+vALU
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1749178745
 !i10b 1
-!s100 mI>8PHgoh5EBZVo<PX<2M0
-IgMKedHE8^O0hi`Pz[9o[h1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z3 w1729449413
-Z4 8../part3.v
-Z5 F../part3.v
-L0 54
-Z6 OV;L;10.5b;63
+!s100 hFgQB4]95OZJ3joTO61o?0
+IziITOD0BD6EggnG9<gBNd0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ALU_sv_unit
+S1
+Z4 dC:/Projects/RISC-V-32-bit-Processor/Modules/ALU/ModelSim
+w1749178743
+8../ALU.sv
+F../ALU.sv
+L0 1
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1729625227.000000
-Z8 !s107 ../part3.v|
-Z9 !s90 -reportprogress|300|../part3.v|
+Z6 !s108 1749178745.000000
+!s107 ../ALU.sv|
+!s90 -reportprogress|300|-sv|../ALU.sv|
 !i113 1
-Z10 tCvgOpt 0
+o-sv
+Z7 tCvgOpt 0
+n@a@l@u
+vclockDown
+Z8 !s110 1729625227
+!i10b 1
+!s100 mI>8PHgoh5EBZVo<PX<2M0
+IgMKedHE8^O0hi`Pz[9o[h1
+R3
+R0
+Z9 w1729449413
+Z10 8../part3.v
+Z11 F../part3.v
+L0 54
+R5
+r1
+!s85 0
+31
+Z12 !s108 1729625227.000000
+Z13 !s107 ../part3.v|
+Z14 !s90 -reportprogress|300|../part3.v|
+!i113 1
+R7
 nclock@down
 vComparisonUnit
-Z11 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z12 !s110 1748617971
+R1
+!s110 1748617971
 !i10b 1
 !s100 TIBmmnRf`MU_>VGgR9JP[3
 I4U1T05I:TKeZc]1d2DIfY1
-R2
+R3
 !s105 ComparisonUnit_sv_unit
 S1
-Z13 dC:/Projects/RISC-V-32-bit-Processor/Modules/ComparisonUnit/ModelSim
+dC:/Projects/RISC-V-32-bit-Processor/Modules/ComparisonUnit/ModelSim
 w1748617969
 8../ComparisonUnit.sv
 F../ComparisonUnit.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-Z14 !s108 1748617971.000000
+!s108 1748617971.000000
 !s107 ../ComparisonUnit.sv|
 !s90 -reportprogress|300|-sv|../ComparisonUnit.sv|
 !i113 1
 o-sv
-R10
+R7
 n@comparison@unit
 vdigit_flipper
-R1
+R8
 !i10b 1
 !s100 zg8e180PeS^TZ@CmEL<eB0
 I3JA3hOlA>oDOQV91H<zLd3
-R2
-R0
 R3
-R4
-R5
+R0
+R9
+R10
+R11
 L0 36
-R6
+R5
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R13
+R14
 !i113 1
-R10
+R7
 vneuron
-R11
+R1
 Z15 !s110 1748447715
 !i10b 1
 !s100 CRfb_@zWd@cIJ38[mX`kR2
 IRC8G:Y;zeiH5_14OWnHMP1
-R2
+R3
 !s105 neuron_sv_unit
 S1
 Z16 dC:/Projects/Neural Network on FPGA/ModelSim/Neuron/ModelSim
@@ -88,7 +113,7 @@ w1748447675
 8../neuron.sv
 F../neuron.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
@@ -97,34 +122,34 @@ Z17 !s108 1748447715.000000
 !s90 -reportprogress|300|-sv|../neuron.sv|
 !i113 1
 o-sv
-R10
+R7
 vpart3
-R1
+R8
 !i10b 1
 !s100 jGM47Hz8BNIhndgIGUT4S2
 Ic?QBeLPL5mU2AGSebM?DD0
-R2
-R0
 R3
-R4
-R5
+R0
+R9
+R10
+R11
 L0 23
-R6
+R5
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R13
+R14
 !i113 1
-R10
+R7
 vreLU
-R11
+R1
 R15
 !i10b 1
 !s100 Dg`mHmPW?_31:8iNgo@g03
 I[J4fN3oYL:428kcRTo3;G1
-R2
+R3
 !s105 reLU_sv_unit
 S1
 R16
@@ -132,7 +157,7 @@ w1748192349
 8../reLU.sv
 F../reLU.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
@@ -141,79 +166,79 @@ R17
 !s90 -reportprogress|300|-sv|../reLU.sv|
 !i113 1
 o-sv
-R10
+R7
 nre@l@u
 vseg7
-R1
+R8
 !i10b 1
 !s100 5AhNd3d@ol=7clo9QeUEH1
 I1A=C3O9l:bR_B7SCO>QZA1
-R2
-R0
 R3
-R4
-R5
+R0
+R9
+R10
+R11
 L0 70
-R6
+R5
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 1
-R10
-vtestbench
-R11
 R12
-!i10b 1
-!s100 _IcLEzYKJ[M`;[mFAkW:40
-IkA:6gl<fFNf56A28A[YEl0
+R13
+R14
+!i113 1
+R7
+vtestbench
+R1
 R2
+!i10b 1
+!s100 z_Yz7c[d]QjmVlW1QWV7T2
+IC8G8E]V^lIBB`zY_=>Id_2
+R3
 !s105 testbench_sv_unit
 S1
-R13
-w1748617902
+R4
+w1749178678
 8testbench.sv
 Ftestbench.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R14
+R6
 !s107 testbench.sv|
 !s90 -reportprogress|300|-sv|testbench.sv|
 !i113 1
 o-sv
-R10
+R7
 vtop
-R1
+R8
 !i10b 1
 !s100 6nP=[lVBQB3GZ0nU`HW8Y2
 IZkR>7zLCWN7_`m:MidA<U3
-R2
-R0
 R3
-R4
-R5
+R0
+R9
+R10
+R11
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R13
+R14
 !i113 1
-R10
+R7
 vweights
-R11
+R1
 R15
 !i10b 1
 !s100 f::R>?el_l@@TCj><a^dg0
 I4J99DmAk3l04hCzWCL9l^3
-R2
+R3
 !s105 weights_sv_unit
 S1
 R16
@@ -221,7 +246,7 @@ w1748193238
 8../weights.sv
 F../weights.sv
 L0 2
-R6
+R5
 r1
 !s85 0
 31
@@ -230,4 +255,4 @@ R17
 !s90 -reportprogress|300|-sv|../weights.sv|
 !i113 1
 o-sv
-R10
+R7

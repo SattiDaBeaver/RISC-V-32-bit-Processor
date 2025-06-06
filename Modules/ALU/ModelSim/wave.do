@@ -6,14 +6,16 @@ add wave -noupdate -label Reset -radix binary /testbench/reset
 add wave -noupdate -divider Inputs
 add wave -noupdate -label inputA -radix hexadecimal /testbench/inputA
 add wave -noupdate -label inputB -radix hexadecimal /testbench/inputB
-add wave -noupdate -label select -radix hexadecimal /testbench/compSelect
+add wave -noupdate -label select -radix hexadecimal /testbench/ALUSelect
 
 add wave -noupdate -divider "Internal Nets"
 
 add wave -noupdate -divider Outputs
-add wave -noupdate -label output -radix hexadecimal /testbench/compOut
-add wave -noupdate -label outputBit -radix hexadecimal /testbench/compBit
-add wave -noupdate -label expectedOutput -radix hexadecimal /testbench/compOutExpected
+add wave -noupdate -label output -radix hexadecimal /testbench/dataOut
+add wave -noupdate -label outputHigh -radix hexadecimal /testbench/dataOutHigh
+add wave -noupdate -label expectedOutput -radix hexadecimal /testbench/dataOutExpected
+add wave -noupdate -label expectedOutputHigh -radix hexadecimal /testbench/dataOutHighExpected
+
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {10000 ps} 0}
 quietly wave cursor active 1

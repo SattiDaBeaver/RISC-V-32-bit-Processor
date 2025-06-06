@@ -83,6 +83,12 @@ module testbench ();
         inputB              = 32'h00000007;
         dataOutExpected     = 32'h00000031;
         dataOutHighExpected = 32'h0;
+        #10
+        inputA              = 32'h0034080F;
+        inputB              = 32'h0FEFA843;
+        dataOutExpected     = 32'h00000031;
+        dataOutHighExpected = 32'h0;
+
 
         #20
         compSelect          = AND;
@@ -167,9 +173,6 @@ module testbench ();
         inputB              = 32'd1;
         dataOutExpected     = 32'h00000001;
         dataOutHighExpected = 32'h0;
-
-        #20
-        $finish;
     end
 
     ALU #(
